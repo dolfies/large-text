@@ -59,17 +59,17 @@ window.addEventListener('DOMContentLoaded', function() {
         if (inputField.value !== text) {
             inputField.value = text;
         }
-        updateFragment(text);
+        //updateFragment(text);
     }
 
     function onInput(evt) {
-        updateFragment(evt.target.value);
+        //updateFragment(evt.target.value);
     }
 
     function enterInputMode(evt) {
         var defaultHash = '#' + encodeURIComponent(WELCOME_MSG);
         if (location.hash === defaultHash) {
-            updateFragment('');
+            //updateFragment('');
             renderText();
         }
         inputField.focus();
@@ -155,7 +155,7 @@ window.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('hashchange', renderText, false);
 
     if (!location.hash) {
-        updateFragment(WELCOME_MSG);
+        //updateFragment(WELCOME_MSG);
     }
 
     renderText();
